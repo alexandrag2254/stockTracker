@@ -1,0 +1,63 @@
+<div ng-controller="stocksController">
+    <div id="box">
+      <h5 ng-bind="errors" style="color: red"></h5>
+      <form>
+          Stock Symbol: <input type="text" ng-model="stock.symbol"><br>
+          Change($): <input type="number" ng-model="stock.change"><br>
+          <input type="submit" value="Track" ng-click="addStock()">
+      </form>
+    </div>
+
+      <!-- table -->
+    <div id="table">
+      <div id="result">{{current_info.symbol}}</div>
+      <table>
+        <th>Date</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Low</th>
+        <th>High</th>
+        <tbody>
+          <tr>
+            <td id="date">{{current_info.date}}</td>
+            <td id="start">{{current_info.open}}</td>
+            <td id="end">{{current_info.close}}</td>
+            <td id="low">{{current_info.low}}</td>
+            <td id="high">{{current_info.high}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- another table list to track the stock and their changes -->
+    <h4>Your List of Stocks</h4>
+
+    <div id="stock_list">
+      <table>
+        <th>Stock Name</th>
+        <th>Change ($)</th>
+        <th>Options</th>
+        <tbody>
+          <tr ng-repeat="stock in stocks | orderBy: 'date'">
+            <td>{{stock.symbol}}</td>
+            <td id="change">{{stock.change}}
+            </td>
+            <td>
+              <a href="#/graph">Details</a> | <button ng-click="Delete(stock._id, stock.symbol)">Delete</button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $('#update').hide();
+  $('#enter').hide();
+      
+})
+</script>

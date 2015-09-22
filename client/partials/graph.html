@@ -1,0 +1,25 @@
+<div ng-controller="stocksController">
+	<!-- graph -->
+	<div id="dates">
+        Start Date: <input type="date" id="startdate" ng-model="stock.startdate"><br>
+        End Date: <input type="date" id="enddate" ng-model="stock.enddate"><br>
+        <button type="submit" ng-click="createGraph()"> Create Graph </button>
+     </div>
+
+    <div id="container" style="height: 400px; min-width: 310px"></div>
+    <!--  -->
+    <div id="data_table">
+ <!--    	<table>
+        <th>Stock Name</th>
+        <th>Down by {{stock.change}}</th>
+        <th>Up by {{stock.change}}</th>
+        <tbody>
+          <tr ng-repeat="stock in stocks | orderBy: 'date'">
+            <td></td>
+            <td>{{stock.change}}</td>
+            <td><a href="#/graph">Details</a> | <button ng-click="Delete(stock.symbol, stock._id)">Delete</button> | <button ng-click='Update(stock._id)'>Update</button></td>
+          </tr>
+        </tbody>
+      </table> -->
+    </div>
+</div>

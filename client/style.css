@@ -1,0 +1,39 @@
+html {
+  font-family: "Montserrat";
+  margin:0 auto;
+  width:970px;
+}
+table, td, th {
+  border: 1px solid gray;
+  padding:10px;
+  text-align: center;
+}
+#table {
+  display: inline-block;
+  /*vertical-align: top;*/
+  float:left;
+}
+#box {
+  /*border:3px solid gray;*/
+  float:left;
+  line-height:1.8;
+  padding:15px;
+  width:400px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: 
+}
+#result, #input{
+  text-align: center;
+}
+#result {
+  margin:20px;
+}
+
+#stock_list {
+  /*display: inline-block;*/
+  /*float:right;*/
+  width:600px;
+  /*text-align: center;*/
+  /*vertical-align: top;*/
+}

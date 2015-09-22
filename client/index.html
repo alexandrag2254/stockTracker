@@ -1,0 +1,33 @@
+<html>
+<head>
+  <!-- links -->
+  <title>Stock Project</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- for graphing -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="http://code.highcharts.com/stock/highstock.js"></script>
+  <!--  -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js'></script>
+  <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+  <!-- requiring the angular page -->
+  <script type="text/javascript" src="app.js"> </script>
+
+</head>
+
+
+<body ng-app="stocks">
+  <h2>Stock Project</h2>
+  <a href="#/data">Data</a>
+
+  <div ng-view=""></div>
+
+</body>
+
+</html>
+
+
